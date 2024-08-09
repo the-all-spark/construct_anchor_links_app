@@ -1,7 +1,7 @@
 const form = document.querySelector("#form");
 form.addEventListener("submit", handleForm);
 
-// reset -->
+// * reset -->
 form.addEventListener("reset", function () {
     document.querySelector(".warning").innerHTML = "";
     document.querySelector("#outputMainLink").innerHTML = "";
@@ -16,7 +16,7 @@ form.addEventListener("reset", function () {
 
 });
 
-// submit -->
+// * submit -->
 function handleForm(e) {
     e.preventDefault();
     document.querySelector(".warning").innerHTML = "";
@@ -27,44 +27,43 @@ function handleForm(e) {
     let blockTag = form.blockTag.value || `h2`; // данные для раздела/секции, связанного со ссылкой-якорем
 
     if (idStr && textLink && blockTag) {
-        // основная ссылка (как будет отображаться на странице)
+        // как отображается основная ссылка на странице
         let outputMainLink = displayMainLink(idStr, textLink); //вызов функции
-        //console.log(`Основная ссылка: ${outputMainLink}`);
         document.querySelector("#outputMainLink").innerHTML = outputMainLink;
+        //console.log(`Основная ссылка: ${outputMainLink}`);
 
         // Код для основной ссылки
         let outputMainLinkCode = displayStr(outputMainLink); //вызов функции
-        //console.log(`Код основной ссылки: ${outputMainLinkCode}`);
         document.querySelector("#outputMainLinkCode").innerHTML = outputMainLinkCode;
+         //console.log(`Код основной ссылки: ${outputMainLinkCode}`);
 
         // как отображается заголовок в блоке/секции
-        let outputSectionElem = displaySectionElem(idStr, textLink, blockTag);
-        //console.log(`Блок/секция: ${outputSectionElem}`);
+        let outputSectionElem = displaySectionElem(idStr, textLink, blockTag); //вызов функции
         document.querySelector("#outputSectionElem").innerHTML = outputSectionElem;
+        //console.log(`Блок/секция: ${outputSectionElem}`);
 
-        // Код для блок/секция
+        // Код для блока/секции
         let outputSectionElemCode = displayStr(outputSectionElem); //вызов функции
         document.querySelector("#outputSectionElemCode").innerHTML = outputSectionElemCode;
 
     } else {
         document.querySelector(".warning").innerHTML = "Введите необходимые данные";
     }
-
 }
 
-// Копирование кода
-const copyBtn = document.querySelectorAll('.copy-btn'); // все кнопки
+// * Копирование кода при клике на кнопку Copy
+const copyBtn = document.querySelectorAll('.copy-btn'); // все кнопки Copy
 
 //перебрать кнопки
 copyBtn.forEach((elem, index) => {
     elem.addEventListener('click', function () {
         let className = '.display-code' + index;
-        console.log(className);
+        //console.log(className);
         let code = document.querySelector(className).innerHTML;
-        console.log(code);
+        //console.log(code);
 
         if (code !== "") {
-            navigator.clipboard.writeText(code);
+            navigator.clipboard.writeText(code); // копирование
             elem.innerHTML = "Copied";
             elem.style.color = "#44bc7f";
         }
@@ -79,7 +78,7 @@ function displayMainLink(id, text) {
     return `<a href="#${id}">${text}</a> <br>`;
 }
 
-// Функция для добавления в код блока/секции
+// Функция для добавления элемента в код блока/секции
 function displaySectionElem(id, text, tag) {
     return `<${tag} id="${id}">${text}</${tag}>`;
 }
