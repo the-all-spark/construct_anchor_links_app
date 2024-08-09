@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Functions to construct links</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <h2 style="text-align:center;">Ссылка-якорь и заголовок блока: отображение и код для вставки</h2>
+
+    <div class="example">
+        <span style='font-family:courier; font-size:14px;'>&lt;a href='#link'&gt;Link&lt;/a&gt;</span> <br>
+        <span style='font-family:courier; font-size:14px;'>&lt;h2 id='link'&gt;Link&lt;/h2&gt;</span>
+    </div>
+
+    <form action="#" id="form">
+        <p>Введите:</p>
+        <ol>
+            <li>
+                <label for="idStr">ссылку (<span style='font-family:courier; font-size:14px;'>href='#...'</span>) и
+                    значение id
+                    элемента: </label>
+                <input type="text" name="idStr" id="idStr"> <br>
+            </li>
+            <li>
+                <label for="textLink">текст ссылки-якоря: </label>
+                <input type="text" name="textLink" id="textLink"> <br>
+            </li>
+            <li>
+                <label for="blockTag">тег блока (по умолчанию -
+                    <span style='font-family:courier; font-size:15px;'>&lt;h2&gt;</span>): </label>
+                <input type="text" name="blockTag" id="blockTag"> <br>
+            </li>
+        </ol>
+
+        <input type="submit" value="Сформировать код">
+        <input type="reset" value="Очистить поля">
+        <span class="warning"></span>
+    </form>
+
+    <h3 class="header">Ссылка-якорь (например, в меню)</h3>
+    <span><i>Отображается как:</i></span>
+    <div id="outputMainLink" class="display-code display-code0"></div> <br>
+    <span><i>Код:</i></span>
+    <div id="outputMainLinkCode" class="output"></div>
+    <div class="copy-btn">Copy</div>
+
+    <h3 class="header">Заголовок блока/секции</h3>
+    <span><i>Отображается как:</i></span>
+    <div id="outputSectionElem" class="display-code display-code1"></div>
+    <span><i>Код:</i></span>
+    <div id="outputSectionElemCode" class="output"></div>
+    <div class="copy-btn">Copy</div>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
