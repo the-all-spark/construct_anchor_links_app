@@ -16,13 +16,12 @@
         <span style='font-family:courier; font-size:14px;'>&lt;h2 id='link'&gt;Link&lt;/h2&gt;</span>
     </div>
 
-    <form action="#" id="form">
+    <form id="form" action="#">
         <p>Введите:</p>
         <ol>
             <li>
-                <label for="idStr">ссылку (<span style='font-family:courier; font-size:14px;'>href='#...'</span>) и
-                    значение id
-                    элемента: </label>
+                <label for="idStr">имя ссылки (<span style='font-family:courier; font-size:14px;'>href='#...'</span>) и
+                    значение id элемента: </label>
                 <input type="text" name="idStr" id="idStr"> <br>
             </li>
             <li>
@@ -51,9 +50,28 @@
     <h3 class="header">Заголовок блока/секции</h3>
     <span><i>Отображается как:</i></span>
     <div id="outputSectionElem" class="display-code display-code1"></div>
+
+    <form id="style-block" action="#" >
+        <span class="subpoint"><i>Стилизация элемента:</i></span> <br>
+        <label for="color">Цвет текста (<span class="codeStr">color</span>):</label>
+        <input type="color" name="color" id="color" /> <br>
+        <label for="align">Выравнивание (<span class="codeStr">text-align</span>):</label>
+        <select name="align" id="align">
+            <option value="left">Слева</option>
+            <option value="center">По центру</option>
+            <option value="right">Справа</option>
+        </select>
+        <input type="submit" value="Применить" id="apply-btn">
+    </form>
+
     <span><i>Код:</i></span>
     <div id="outputSectionElemCode" class="output"></div>
     <div class="copy-btn">Copy</div>
+
+    <!-- TODO
+    <div id="outputSubitemLink"></div>
+    <div id="outputSubitemLinkCode" class="output"></div> 
+    -->
 
     <script src="./script.js"></script>
 

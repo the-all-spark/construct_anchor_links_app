@@ -36,3 +36,25 @@ input {
 .warning {
     color: red;
 }
+
+.codeStr {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+
+/*.subpoint {
+    display: inline-block;
+    margin-top: 20px;
+}*/
+
+/* ------- Стилизация результата ---------- */
+
+#style-block {
+    display: none;
+    margin: 20px 0;
+}
+
+#apply-btn {
+    display: block;
+    float: right;
+}
