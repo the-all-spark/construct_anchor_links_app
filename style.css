@@ -54,7 +54,15 @@ input {
     margin: 20px 0;
 }
 
-#apply-btn {
+#copy-style-block {
+    display: none;
+}
+
+#apply-btn{
     display: block;
     float: right;
+}
+
+#copy-style-btn:disabled:hover {
+    cursor: not-allowed;
 }
