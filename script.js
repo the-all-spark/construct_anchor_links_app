@@ -18,18 +18,16 @@ form.addEventListener("reset", function () {
         elem.style.color = "#858585";
     })
 
-    // очистить поля формы стилизации
+    // вернуть значения полей формы и отображение блока к установленным по умолчанию
     styleForm.chosenColor.value = "#000000";
     styleForm.chosenAlign.value = "left";
+    document.querySelector("#outputSectionElem").style.color = "#000000";
+    document.querySelector("#outputSectionElem").style.textAlign = "left";
 
-    // изменить текст кнопки копирования
+    // изменить текст кнопки копирования, заблокировать ее
     document.querySelector("#copy-style-btn").innerHTML = "Скопировать стили";
     document.querySelector("#copy-style-btn").style.color = "#000000";
     document.querySelector("#copy-style-btn").setAttribute("disabled", "");
-
-    // вернуть отображение блока к значениям по умолчанию
-    document.querySelector("#outputSectionElem").style.color = "#000000";
-    document.querySelector("#outputSectionElem").style.textAlign = "left";
 
     // скрыть форму стилизации
     styleForm.style.display = "none"; 
