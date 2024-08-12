@@ -51,22 +51,29 @@
     <span><i>Отображается как:</i></span>
     <div id="outputSectionElem" class="display-code display-code1"></div>
 
-    <form id="style-block" action="#" >
-        <span class="subpoint"><i>Стилизация элемента:</i></span> <br>
-        <label for="color">Цвет текста (<span class="codeStr">color</span>):</label>
-        <input type="color" name="color" id="color" /> <br>
-        <label for="align">Выравнивание (<span class="codeStr">text-align</span>):</label>
-        <select name="align" id="align">
-            <option value="left">Слева</option>
-            <option value="center">По центру</option>
-            <option value="right">Справа</option>
-        </select>
-        <input type="submit" value="Применить" id="apply-btn">
-    </form>
-
     <span><i>Код:</i></span>
     <div id="outputSectionElemCode" class="output"></div>
     <div class="copy-btn">Copy</div>
+
+    <form id="style-block" action="#" >
+        <span class="subpoint"><i>Стилизация элемента:</i></span> <br>
+        <label for="color">Цвет текста (<span class="codeStr">color</span>):</label>
+        <input type="color" name="chosenColor" id="color" /> <br>
+        <label for="align">Выравнивание (<span class="codeStr">text-align</span>):</label>
+        <select name="chosenAlign" id="align">
+            <option value="left" selected>Слева</option>
+            <option value="center">По центру</option>
+            <option value="right">Справа</option>
+        </select>
+        <input type="submit" value="Применить" id="apply-btn">  
+    </form>
+    
+    <br>
+    <div id="copy-style-block">
+        <span><i>После применения стилей вы можете их скопировать:</i></span>
+        <button id="copy-style-btn">Скопировать стили</button>
+    </div>
+    
 
     <!-- TODO
     <div id="outputSubitemLink"></div>
