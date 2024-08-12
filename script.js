@@ -77,8 +77,40 @@ function handleMainForm(e) {
     }
 }
 
+// * submit -->
+function handleStyleForm(e) {
+    e.preventDefault();
 
+    // получение данных формы стилизации
+    let color = styleForm.chosenColor.value;
+    let align = styleForm.chosenAlign.value;
 
+    // применение стилизации к отображению заголовка блока
+    outputSectionElem.style.color = color; 
+    outputSectionElem.style.textAlign = align;
+
+    // * при клике на кнопку копирования стилей -->
+    let copyStyleBtn = document.querySelector("#copy-style-btn");
+    copyStyleBtn.removeAttribute("disabled"); // "разблокировка" кнопки
+
+    copyStyleBtn.addEventListener("click", function() {
+        let outputStyles = `style="color:${color};text-align:${align};"`;
+
+        navigator.clipboard.writeText(outputStyles);
+        copyStyleBtn.innerHTML = "Скопировано!"
+        copyStyleBtn.style.color = "#44bc7f";
+
+        // изменение текста кнопки копирования при выборе других свойств
+        styleForm.chosenColor.addEventListener("change", resetCopyBtn);
+        styleForm.chosenAlign.addEventListener("change", resetCopyBtn);
+        
+        function resetCopyBtn() {
+            copyStyleBtn.innerHTML = "Скопировать стили";
+            copyStyleBtn.style.color = "#000000";
+        }
+    });  
+
+}
 
 // * Копирование кода при клике на кнопку Copy
 const copyBtn = document.querySelectorAll('.copy-btn'); // все кнопки Copy
