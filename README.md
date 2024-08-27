@@ -1,57 +1,60 @@
 # Anchor links constructor (HTML | CSS | JS)
 
-## О проекте
-Приложение, которое выводит код ссылки-якоря и привязанного к ней блока по значениям, введенным пользователем в форму, а именно:
-- имя ссылки (которое является также и id элемента);
-- текст ссылки;
-- тег блока.  
+[Switch to Russian | Переключиться на русский](./README-ru.md)
 
-В поле вывода отображается код, который можно скопировать кликом по кнопке "Copy".  
-После отображения кода становится доступна форма стилизации элемента.
+## About the project
+An application that outputs the code of an anchor link and its bound block according to the values entered by the user in a form, as follows:
+- link name (which is also the id of the element);
+- link text;
+- block tag.  
 
-**Инструменты:** 
+The code is displayed in the output field, which can be copied by clicking on the “Copy” button.  
+After the code is displayed, the element styling form becomes available.
+
+**Tools:** 
 ![image](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white "Visual Studio Code")
 
-**Языки:** 
+**Stack:** 
 ![image](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white "HTML") 
 ![image](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white "CSS") 
 ![image](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E "JS") 
 
-**Демо:**  
-[Перейти на сайт](https://the-all-spark.github.io/construct_anchor_links_app/)  
-[Песочница на Codepen, версия 1.0](https://codepen.io/Lisovolk/pen/bGPgQZZ)  
-<img src="./assets/app_screenshot_blank.jpg" width="400" alt="Скриншот приложения до ввода данных">
-<img src="./assets/app_screenshot_styling.jpg" width="400" alt="Скриншот приложения с возможностью изменить стили">
-<img src="./assets/app_screenshot_change_styles.jpg" width="400" alt="Скриншот приложения, изменение и копирование стилей">
+**Demo:** [Go to site](https://the-all-spark.github.io/construct_anchor_links_app/)  
+[Codepen, version 1.0](https://codepen.io/Lisovolk/pen/bGPgQZZ)  
+<img src="./assets/app_screenshot_blank.jpg" width="400" alt="App screenshot before data entering">
+<img src="./assets/app_screenshot_styling.jpg" width="400" alt="App screenshot with the ability to change styles">
+<img src="./assets/app_screenshot_change_styles.jpg" width="400" alt="App screenshot, changing and copying styles">
+<img src="./assets/app_responsive layout.jpg" width="400" alt="App screenshot, responsive layout">
 
-## Реализованный функционал:
-1. вывод предупреждения при отправке формы, если поля не заполнены (кроме последнего, т.к. предусмотрено значение по умолчанию);
+## Realized functionality:
+1. displaying a warning when submitting a form if the fields are not filled in (except for the last one, since a default value is provided);
+2. responsive layout (for the screen width from 1920 px to 300 px).
 
-### Основная форма
-2. при клике на кнопку "Сформировать код" (`submit`):
-   - отмена перезагрузки страницы с формой;
-   - сбор данных, введенных пользователем в форму;
-   - вызов функции `displayMainLink` по построению ссылки-якоря;
-   - вызов функции `displaySectionElem` по построению заголовка блока/секции;
-   - вызов функции `displayStr` по преобразованию строки кода для его отображения на странице; 
-   - отображение ссылки и заголовка на странице, а также кода - в блоке "Код";
-   - отображение формы стилизации элемента (и вызов функции обработки отправки формы).
-3. при клике на кнопку "Copy" - копирование соответствующего блока кода (текст кнопки при этом меняется на "Copied");
-4. при клике на кнопку "Очистить поля" (`reset`):
-   - удаление введенных в поля основной формы значений, а также выведенного кода; 
-   - отображение текста "Copy" (вместо "Copied");
-   - возврат значений полей формы стилизации к установленным по умолчанию;
-   - отображение заголовка блока со стилями по умолчанию;
-   - изменение текста кнопки копирования и ее блокировка;
-   - скрытие формы стилизации элемента.
+### Main form
+3. when clicking on the “Generate code” button  ("Сформировать код" ) (`submit`):
+   - cancelling the reloading of the page;
+   - collecting the data entered by the user in the form;
+   - calling the `displayMainLink` function to build an anchor link;
+   - calling of the `displaySectionElem` function to build a block/section header;
+   - calling of the `displayStr` function to convert a code string in order to display it on the page; 
+   - displaying the link and the heading on the page, as well as the code - in the “Code” block;
+   - displaying the element styling form (and calling the form submission processing function).
+4. when clicking on the “Copy” button - to copy the corresponding code block (the button text changes to “Copied”);
+5. when clicking on the “Clear fields” button ("Очистить поля" ) (`reset`):
+   - deleting the values entered in the fields of the main form, as well as the output code; 
+   - displaying the text “Copy” (instead of “Copied”);
+   - returning the values of the styling form fields to the default ones;
+   - displaying the heading of the block with default styles;
+   - changing the text of the style copy button and locking it;
+   - hiding the element's styling form.
 
-### Форма стилизации элемента
-5. при клике на кнопку "Применить" (`submit`):
-   - отмена перезагрузки страницы с формой;
-   - сбор выбранных пользователем параметров (цвет, выравнивание);
-   - применение стилизации к отображаемому заголовку;
-6. при клике на кнопку копирования стилей "Скопировать стили" (`click`):
-   - разблокировка кнопки;
-   - построение строки стилей (style ="...");
-   - копирование строки и изменение текста и цвета кнопки на "Скопировано!".
-   - возврат кнопке значений по умолчанию при последующем изменении любого из стилей (`change`).
+### Form of element styling
+6. when clicking on the “Apply” button ("Применить") (`submit`):
+   - cancelling the reloading of the page;
+   - collecting parameters selected by the user (color, alignment);
+   - application of stylization to the displayed heading;
+7. when clicking on the style copy button “Copy styles” ("Скопировать стили") (`click`):
+   - unlocking the button;
+   - building a string of styles (style =“...”);
+   - copying the string and changing the text and color of the button to “Copied!” ("Скопировано!");
+   - returning the button to its default values when any of the styles is subsequently changed (`change`).
