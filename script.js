@@ -29,9 +29,10 @@ form.addEventListener("reset", function () {
     document.querySelector("#copy-style-btn").style.color = "#000000";
     document.querySelector("#copy-style-btn").setAttribute("disabled", "");
 
-    // скрыть форму стилизации
+    // скрыть форму стилизации и пример использования стилей 
     styleForm.style.display = "none"; 
     document.querySelector("#copy-style-block").style.display = "none";
+    document.querySelector(".use-example").style.display = "none";
 });
 
 // * submit -->
@@ -64,9 +65,10 @@ function handleMainForm(e) {
         let outputSectionElemCode = displayStr(outputSectionElem); //вызов функции
         document.querySelector("#outputSectionElemCode").innerHTML = outputSectionElemCode;
 
-        // отобразить форму стилизации заголовка и формы копирования
+        // отобразить форму стилизации заголовка и формы копирования, а также пример использования стилей
         styleForm.style.display = "block"; 
         document.querySelector("#copy-style-block").style.display = "block";
+        document.querySelector(".use-example").style.display = "block";
 
         styleForm.addEventListener("submit", handleStyleForm); 
 

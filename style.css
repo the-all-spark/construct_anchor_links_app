@@ -58,6 +58,10 @@ input {
     display: none;
 }
 
+.use-example {
+    display: none;
+}
+
 #apply-btn{
     display: block;
     float: right;
