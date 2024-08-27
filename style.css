@@ -82,3 +82,74 @@ input {
 #copy-style-btn:disabled:hover {
     cursor: not-allowed;
 }
+
+/* ----------- Media queries ----------- */
+
+@media screen and (max-width: 1500px) {
+    body {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .use-example {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    body {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        width: 65%;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    .use-example {
+        margin: 30px auto 40px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        width: 75%;
+        
+    }
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        width: 85%;
+    }
+    .example {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        width: 90%;
+    }
+    .example {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    #apply-btn {
+        float: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .example {
+        width: 80%;
+    }
+    .use-example {
+        padding: 5px 10px;
+    }
+}
