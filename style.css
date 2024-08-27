@@ -10,6 +10,10 @@ body {
 
 .example {
     text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    border: 2px solid rgba(190, 28, 28, 0.805);
+    padding: 10px 15px;
 }
 
 input {
@@ -60,6 +64,14 @@ input {
 
 .use-example {
     display: none;
+    width: 90%;
+    margin: 30px auto 0;
+    border: 2px solid rgba(190, 28, 28, 0.805);
+    padding: 5px 15px;
+}
+
+.use-example p {
+    margin: 10px 0;
 }
 
 #apply-btn{
