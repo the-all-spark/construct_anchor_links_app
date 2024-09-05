@@ -38,7 +38,7 @@
         </ol>
 
         <input type="submit" value="Сформировать код">
-        <input type="reset" value="Очистить поля">
+        <button type="reset" id="reset-btn">Очистить все поля</button>
         <span class="warning"></span>
     </form>
 
@@ -72,7 +72,7 @@
     
     <br>
     <div id="copy-style-block">
-        <span><i>После применения стилей вы можете их скопировать:</i></span>
+        <span><i>После <b>применения</b> стилей вы можете их скопировать:</i></span>
         <button id="copy-style-btn">Скопировать стили</button>
     </div>
     <div class="use-example">
@@ -80,7 +80,9 @@
         <p style='font-family:courier; font-size:14px;'>&lt;h2 id='link' 
             <span style='color:#df4343;'>style='color:#df4343;text-align:center;'</span>&gt;Link&lt;/h2&gt;</p>
     </div>
-    
+
+    <button type="reset" id="reset-btn-duplicate">Очистить все поля</button>
+   
     <!-- TODO
     <div id="outputSubitemLink"></div>
     <div id="outputSubitemLinkCode" class="output"></div> 
