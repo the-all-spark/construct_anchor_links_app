@@ -5,7 +5,7 @@ body {
 
 .header {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .example {
@@ -28,6 +28,16 @@ input {
     box-sizing: border-box;
 }
 
+.buttons-warning-block {
+    display: flex;
+    justify-content: end;
+    column-gap: 20px;
+}
+
+.warning {
+    color: red;
+}
+
 .copy-btn {
     color: #858585;
     float: right;
@@ -37,10 +47,6 @@ input {
     cursor: pointer;
 }
 
-.warning {
-    color: red;
-}
-
 .codeStr {
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
@@ -48,7 +54,9 @@ input {
 
 #reset-btn-duplicate{
     display: none;
+    float: right;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 button[type="reset"] {

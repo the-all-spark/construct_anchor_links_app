@@ -18,6 +18,7 @@
         <span style='font-family:courier; font-size:14px;'>&lt;h2 id='link'&gt;Link&lt;/h2&gt;</span>
     </div>
 
+    <!-- Основная форма -->
     <form id="form" action="#">
         <p>Введите:</p>
         <ol>
@@ -37,9 +38,16 @@
             </li>
         </ol>
 
-        <input type="submit" value="Сформировать код">
-        <button type="reset" id="reset-btn">Очистить все поля</button>
-        <span class="warning"></span>
+        <div class="buttons-warning-block">
+            <div class="warning-block">
+                <span class="warning"></span>
+            </div>
+            <div class="buttons-block">
+                <input type="submit" value="Сформировать код">
+                <button type="reset" id="reset-btn">Очистить все поля</button>
+            </div>  
+        </div>
+        
     </form>
 
     <h3 class="header">Ссылка-якорь (например, в меню)</h3>
@@ -57,6 +65,7 @@
     <div id="outputSectionElemCode" class="output"></div>
     <div class="copy-btn">Copy</div>
 
+     <!-- Форма стилизации -->
     <form id="style-block" action="#" >
         <span class="subpoint"><i>Стилизация элемента:</i></span> <br>
         <label for="color">Цвет текста (<span class="codeStr">color</span>):</label>
