@@ -135,6 +135,9 @@ input[type="submit"] {
     .use-example {
         margin: 30px auto 40px;
     }
+    #reset-btn-duplicate {
+       margin-top: 0;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -153,12 +156,29 @@ input[type="submit"] {
     }
 }
 
+@media screen and (max-width: 590px) {
+    .warning-block {
+        flex: 1;
+        text-align: right;
+    }
+    .buttons-block {
+        flex: 2;
+    }
+}
+
 @media screen and (max-width: 500px) {
     body {
         width: 90%;
     }
     .example {
         width: 60%;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .buttons-warning-block {
+        width: 60%;
+        margin: 0 auto;
     }
 }
 
@@ -174,5 +194,17 @@ input[type="submit"] {
     }
     .use-example {
         padding: 5px 10px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .buttons-warning-block {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .buttons-warning-block {
+        width: 90%;
     }
 }
