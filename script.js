@@ -2,9 +2,19 @@ const form = document.querySelector("#form"); // основная форма
 form.addEventListener("submit", handleMainForm); 
 
 let styleForm = document.querySelector("#style-block"); // форма для стилизации заголовка элемента
+let resetButtons = document.querySelectorAll("button[type='reset']");
+
+resetButtons.forEach((btn) => {
+    btn.addEventListener("click", clearFields);
+});
 
 // * reset -->
-form.addEventListener("reset", function () {
+function clearFields() {
+    // очистить все поля ввода
+    form.idStr.value = ''; 
+    form.textLink.value = '';
+    form.blockTag.value = '';
+
     // очистить все блоки вывода
     document.querySelector(".warning").innerHTML = "";
     document.querySelector("#outputMainLink").innerHTML = "";
@@ -33,9 +43,13 @@ form.addEventListener("reset", function () {
     styleForm.style.display = "none"; 
     document.querySelector("#copy-style-block").style.display = "none";
     document.querySelector(".use-example").style.display = "none";
-});
 
-// * submit -->
+    //скрыть нижнюю кнопку очистить поля
+    document.querySelector("#reset-btn-duplicate").style.display = "none";
+
+}
+
+// * submit (основная форма) --> 
 function handleMainForm(e) {
     e.preventDefault();
     document.querySelector(".warning").innerHTML = "";
@@ -72,12 +86,15 @@ function handleMainForm(e) {
 
         styleForm.addEventListener("submit", handleStyleForm); 
 
+        // отобразить нижнюю кнопку очистить стили
+        document.querySelector("#reset-btn-duplicate").style.display = "block";
+
     } else {
         document.querySelector(".warning").innerHTML = "Введите необходимые данные";
     }
 }
 
-// * submit -->
+// * submit (форма стилизации) -->
 function handleStyleForm(e) {
     e.preventDefault();
 
