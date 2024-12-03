@@ -23,8 +23,8 @@
         <p>Введите:</p>
         <ol>
             <li>
-                <label for="idStr">имя ссылки (<span style='font-family:courier; font-size:14px;'>href='#...'</span>) и
-                    значение id элемента: </label>
+                <label for="idStr">имя ссылки (<span style='font-family:courier; font-size:14px;'>href='#...'</span>)
+                    (оно же значение id элемента): </label>
                 <input type="text" name="idStr" id="idStr"> <br>
             </li>
             <li>
@@ -45,28 +45,36 @@
             <div class="buttons-block">
                 <input type="submit" value="Сформировать код">
                 <button type="reset" id="reset-btn">Очистить все поля</button>
-            </div>  
+            </div>
         </div>
-        
+
     </form>
 
     <h3 class="header">Ссылка-якорь (например, в меню)</h3>
     <span><i>Отображается как:</i></span>
-    <div id="outputMainLink" class="display-code display-code0"></div> <br>
+    <div id="outputMainLink" class="display-code display-code0">
+        <!-- Вывод ссылки-якоря в DOM -->
+    </div> <br>
     <span><i>Код:</i></span>
-    <div id="outputMainLinkCode" class="output"></div>
-    <div class="copy-btn">Copy</div>
+    <div id="outputMainLinkCode" class="output">
+        <!-- Вывод кода ссылки-якоря -->
+    </div>
+    <div class="copy-btn">Скопировать</div>
 
     <h3 class="header">Заголовок блока/секции</h3>
     <span><i>Отображается как:</i></span>
-    <div id="outputSectionElem" class="display-code display-code1"></div>
+    <div id="outputSectionElem" class="display-code display-code1">
+        <!-- Вывод заголовка в DOM -->
+    </div>
 
     <span><i>Код:</i></span>
-    <div id="outputSectionElemCode" class="output"></div>
-    <div class="copy-btn">Copy</div>
+    <div id="outputSectionElemCode" class="output">
+        <!-- Вывод кода заголовка -->
+    </div>
+    <div class="copy-btn">Скопировать</div>
 
-     <!-- Форма стилизации -->
-    <form id="style-block" action="#" >
+    <!-- Форма стилизации -->
+    <form id="style-block" action="#">
         <span class="subpoint"><i>Стилизация элемента:</i></span> <br>
         <label for="color">Цвет текста (<span class="codeStr">color</span>):</label>
         <input type="color" name="chosenColor" id="color" /> <br>
@@ -76,9 +84,9 @@
             <option value="center">По центру</option>
             <option value="right">Справа</option>
         </select>
-        <input type="submit" value="Применить" id="apply-btn">  
+        <input type="submit" value="Применить" id="apply-btn">
     </form>
-    
+
     <br>
     <div id="copy-style-block">
         <span><i>После <b>применения</b> стилей вы можете их скопировать:</i></span>
@@ -86,16 +94,12 @@
     </div>
     <div class="use-example">
         <p><i>Пример использования стилей:</i></p>
-        <p style='font-family:courier; font-size:14px;'>&lt;h2 id='link' 
-            <span style='color:#df4343;'>style='color:#df4343;text-align:center;'</span>&gt;Link&lt;/h2&gt;</p>
+        <p style='font-family:courier; font-size:14px;'>&lt;h2 id='link'
+            <span style='color:#df4343;'>style='color:#df4343;text-align:center;'</span>&gt;Link&lt;/h2&gt;
+        </p>
     </div>
 
     <button type="reset" id="reset-btn-duplicate">Очистить все поля</button>
-   
-    <!-- TODO
-    <div id="outputSubitemLink"></div>
-    <div id="outputSubitemLinkCode" class="output"></div> 
-    -->
 
     <script src="./script.js"></script>
 
